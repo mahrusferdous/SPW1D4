@@ -29,6 +29,12 @@ function DataFetching() {
     //     console.log(response.data); // getting a 200 https status
     // });
 
+    const demo = useMemo(() => {
+        return Math.floor(Math.random() * 100);
+    }, []);
+
+    console.log(demo);
+
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;
 
